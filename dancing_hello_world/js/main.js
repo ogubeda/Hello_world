@@ -1,3 +1,5 @@
+"use strict";
+
 let myApp
 let stateApp="stop"
 
@@ -8,10 +10,10 @@ let inicia = function(el) {
     let incY = speed * (Math.round(Math.random())?1:-1);
     //let el=document.getElementById("el");
 
-    dw=function danceWorld(){
+    let dw=function danceWorld(){
     
-        x =  el.style.left?parseInt(el.style.left,10):350;
-        y =  el.style.top?parseInt(el.style.top,10):400;
+        let x =  el.style.left?parseInt(el.style.left,10):350;
+        let y =  el.style.top?parseInt(el.style.top,10):400;
 
         el.style.left =  x + incX +"px";
         el.style.top = y + incY+"px";
@@ -24,10 +26,10 @@ let inicia = function(el) {
         if (((y+incY) > (window.innerHeight-40)) || ((y+incY) <= 0))
             incY = (-1)*incY;
     }
-    //return dw;    
+    return dw;    
 };
 
-inicia(document.getElementById("ball"));
+let dw = inicia(document.getElementById("ball"));
 
 let start =function start(){
     stateApp="run"
