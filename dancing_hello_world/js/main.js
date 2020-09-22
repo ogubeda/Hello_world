@@ -1,7 +1,6 @@
 "use strict";
 
-let myApp
-let stateApp="stop"
+// import {docReady} from '/core/core.js';
 
 let inicia = function(el) {
     // DOM is loaded and ready for manipulation here
@@ -32,7 +31,6 @@ let inicia = function(el) {
 let dw = inicia(document.getElementById("ball"));
 
 let start =function start(){
-    stateApp="run"
-    myApp=setInterval(dw,50);
+    stopBall('run', setInterval(dw, 50));
 }
 docReady(start);
