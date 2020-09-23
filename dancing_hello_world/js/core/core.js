@@ -7,4 +7,6 @@ function docReady(fn) {
     } else {
         document.addEventListener("DOMContentLoaded", fn);
     }
-}    
+}
+
+export {docReady};

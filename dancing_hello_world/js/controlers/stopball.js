@@ -1,4 +1,3 @@
-// import {start} from "../main.js";
 
 function stopBall(state, app) {
     let myApp = app;
@@ -15,3 +14,5 @@ function stopBall(state, app) {
         }
     }
 }
+
+export {stopBall};
