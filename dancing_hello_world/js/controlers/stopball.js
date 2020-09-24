@@ -1,7 +1,9 @@
 
-function stopBall(state, app) {
-    let myApp = app;
-    let stateApp = state;
+function stopBall(state, func) {
+    let values = {state: state, func: func};
+    let myApp = setInterval(values.func, 50);
+    let stateApp = values.state;
+
     document.body.onkeyup = function(e){
         if(e.keyCode == 32){
             if (stateApp=="run"){
@@ -9,7 +11,7 @@ function stopBall(state, app) {
                 clearInterval(myApp);
             }else{            
                 stateApp = 'run';
-                myApp = setInterval(dw, 50);
+                myApp = setInterval(values.func, 50);
             }// end_else
         }
     }

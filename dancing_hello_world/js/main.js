@@ -31,6 +31,6 @@ let inicia = function(el) {
 let dw = inicia(document.getElementById("ball"));
 
 let start =function start(){
-    stopBall('run', setInterval(dw, 50));
+    stopBall('run', dw);
 }
 docReady(start);
